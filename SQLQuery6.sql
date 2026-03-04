@@ -10,14 +10,12 @@ SELECT
 FROM customers
 GROUP BY country
 
+ --HAVING
 --having :- filter data after aggregation
 --can be used only with group by
 
---HAVING
-
 --Q.find the average score for each country considering only customers with a scire not equal to 0
 --And return only those countries with an average score greater than 430
-
 SELECT
    country,
    AVG(score) AS avg_score
@@ -26,19 +24,16 @@ WHERE score!=0
 GROUP BY country
 HAVING AVG(score) > 430
 
-     --DISTINCT
-
+--DISTINCT
 --DISTINCT (use to remove duplicates)
 --Q.Return unique list of all country 
-
 SELECT DISTINCT country
 FROM customers
 
---TOP
 
+--TOP
 --TOP (Select value from top based on row)
 --Q.1 Retrive only 3 customers
-
 SELECT TOP 3 *
 FROM customers
 
