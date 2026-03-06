@@ -27,3 +27,28 @@ VALUES
  SELECT * 
  FROM customers
  WHERE id = 6
+
+ --Q. Change the score of customer 10 to 0 and update the country to UK
+ UPDATE customers
+ SET score = 0,
+     country = 'UK'
+ WHERE score IS NULL
+
+ SELECT * 
+ FROM customers
+
+ --Q. Delete all customers with ID gretaer than 5
+ DELETE FROM customers
+ WHERE id > 5
+
+ SELECT * 
+ FROM customers
+
+ --Q. Delete all data from table persons
+TRUNCATE TABLE persons
+
+ SELECT * 
+ FROM persons
+
+
+ 
