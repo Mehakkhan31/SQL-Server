@@ -1,7 +1,7 @@
 --FILTERING DATA
 
 --Comparision operator
---Using =
+--using =
 --Q. Retrive all customers from Germany.
 SELECT *
 FROM customers
@@ -50,3 +50,53 @@ SELECT *
 FROM customers
 WHERE country = 'USA' OR score > 500
 
+--NOT 
+--Q. Retrieve all customers with a score NOT less than 500.
+SELECT *
+FROM customers
+WHERE NOT score < 500
+
+--Range Operator
+--BETWEEN (check if a value is within a range)
+--Q. Retrieve all customers whose score falls in the range BETWEEN 100 and 500.
+SELECT *
+FROM customers
+WHERE score BETWEEN 100 AND 500
+
+SELECT *
+FROM customers
+WHERE score >= 100 AND score <= 500
+
+--Membership Operator
+--IN (check if a value is exist in a list)
+--Q. Retrieve all customersfrom either Germany or USA
+SELECT *
+FROM customers
+WHERE country IN ('Germany','USA')
+
+--NOT IN
+SELECT *
+FROM customers
+WHERE country NOT IN ('Germany','USA')
+
+--Search Operator
+--LIKE (Search for a pattern in text)
+--Q. find all customers whose name start with 'M'.
+SELECT *
+FROM customers
+WHERE first_name LIKE 'M%'
+
+--Q. find all customers whose name ends with 'n'.
+SELECT *
+FROM customers
+WHERE first_name LIKE '%n'
+
+--Q. find all customers whose name contains 'r'.
+SELECT *
+FROM customers
+WHERE first_name LIKE '%r%'
+
+--Q. find all customers whose name contains 'r' in the 3rd position.
+SELECT *
+FROM customers
+WHERE first_name LIKE '__r%'
