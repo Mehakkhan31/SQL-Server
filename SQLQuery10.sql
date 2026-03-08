@@ -7,6 +7,6 @@
 SELECT *
 FROM customers
 INNER JOIN orders
-ON id = customer_id
+ON id = 
 
 
