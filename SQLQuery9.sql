@@ -38,4 +38,15 @@ FROM customers
 WHERE score <= 500
 
 --Logical operators
---And
+--And (All conditions must be TRUE)
+--Q. Retrieve all customers who are from the USA AND have a score gretaer than 500.
+SELECT *
+FROM customers
+WHERE country = 'USA' AND score > 500
+
+--OR (At least one condition must be TRUE
+--Q. Retrieve all customers who areeither from USA OR have a score greater than 500.
+SELECT *
+FROM customers
+WHERE country = 'USA' OR score > 500
+
