@@ -8,7 +8,7 @@ SELECT
    SUM(score) AS total_score,
    COUNT(id) AS total_customers
 FROM customers
-GROUP BY country
+GROUP BY country;
 
  --HAVING
 --having :- filter data after aggregation
